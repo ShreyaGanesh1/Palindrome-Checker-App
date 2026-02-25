@@ -13,14 +13,13 @@ public class PalindromeCheckerApp {
 
         Deque<Character> deque = new ArrayDeque<>();
 
-        // Insert characters into deque
         for (int i = 0; i < input.length(); i++) {
             deque.addLast(input.charAt(i));
         }
 
         boolean isPalindrome = true;
 
-        // Compare front and rear
+    
         while (deque.size() > 1) {
             if (deque.removeFirst() != deque.removeLast()) {
                 isPalindrome = false;
@@ -28,7 +27,7 @@ public class PalindromeCheckerApp {
             }
         }
 
-        // Required output format
+     
         System.out.println("Is Palindrome? : " + isPalindrome);
 
         scanner.close();
